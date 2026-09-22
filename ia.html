@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Okini | Café de Especialidad</title>
+
+<meta name="description" content="Okini Café de Especialidad. Métodos artesanales de café, experiencias y catas.">
+
+<style>
+
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:'Segoe UI', Arial, sans-serif;
+
+    background:#faf7f0;
+
+    color:#2b2b2b;
+
+}
+
+
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/* =========================
+        MENU
+========================= */
+
+
+header{
+
+    background:white;
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    z-index:100;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+
+}
+
+
+
+nav{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+
+
+.logo{
+
+    font-size:35px;
+
+    font-weight:bold;
+
+    letter-spacing:5px;
+
+    color:#2d6a4f;
+
+}
+
+
+
+.logo small{
+
+    display:block;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#777;
+
+}
+
+
+
+.menu{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+
+
+.menu a{
+
+    color:#333;
+
+    font-weight:600;
+
+}
+
+
+
+.menu a:hover{
+
+    color:#74c69d;
+
+}
+
+
+
+/* =========================
+        PORTADA
+========================= */
+
+
+.hero{
+
+
+height:100vh;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
+
+url("img/cafe.jpg");
+
+
+
+background-size:cover;
+
+background-position:center;
+
+
+
+}
+
+
+
+.hero h1{
+
+
+font-size:70px;
+
+color:white;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.hero p{
+
+
+font-size:22px;
+
+color:white;
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+
+}
+
+
+
+.btn{
+
+
+background:#74c69d;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+color:white;
+
+font-weight:bold;
+
+display:inline-block;
+
+
+}
+
+
+
+.btn:hover{
+
+
+background:#40916c;
+
+
+}
+
+
+
+/* =========================
+        SECCIONES
+========================= */
+
+
+section{
+
+padding:90px 20px;
+
+}
+
+
+
+.titulo{
+
+
+text-align:center;
+
+font-size:40px;
+
+color:#2d6a4f;
+
+margin-bottom:40px;
+
+
+}
+
+
+
+.texto{
+
+
+max-width:900px;
+
+margin:auto;
+
+font-size:20px;
+
+text-align:center;
+
+
+}
+
+
+
+/* =========================
+        TARJETAS
+========================= */
+
+
+.contenedor{
+
+
+max-width:1100px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+
+}
+
+
+
+.card{
+
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.08);
+
+
+text-align:center;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.card:hover{
+
+
+transform:translateY(-10px);
+
+
+}
+
+
+
+.card h3{
+
+
+color:#40916c;
+
+font-size:25px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.precio{
+
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#2d6a4f;
+
+
+}
+
+
+
+/* =========================
+        RESERVA
+========================= */
+
+
+.reserva{
+
+
+background:#2d6a4f;
+
+color:white;
+
+text-align:center;
+
+
+}
+
+
+
+.reserva h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+/* =========================
+        FOOTER
+========================= */
+
+
+footer{
+
+
+background:#1b4332;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
+
+
+}
+
+
+
+footer h2{
+
+letter-spacing:5px;
+
+}
+
+
+
+/* =========================
+        CELULAR
+========================= */
+
+
+@media(max-width:800px){
+
+
+nav{
+
+flex-direction:column;
+
+}
+
+
+.menu{
+
+margin-top:20px;
+
+flex-direction:column;
+
+text-align:center;
+
+
+}
+
+
+.hero h1{
+
+
+font-size:40px;
+
+
+}
+
+
+
+.contenedor{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+<nav>
+
+
+<div class="logo">
+
+OKINI
+
+<small>
+CAFÉ DE ESPECIALIDAD
+</small>
+
+
+</div>
+
+
+
+<ul class="menu">
+
+
+<li>
+<a href="#inicio">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="#metodos">
+Métodos
+</a>
+</li>
+
+
+<li>
+<a href="#cata">
+Cata
+</a>
+</li>
+
+
+<li>
+<a href="#contacto">
+Contacto
+</a>
+</li>
+
+
+
+</ul>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="hero" id="inicio">
+
+
+<div>
+
+
+<h1>
+Cada taza merece su tiempo
+</h1>
+
+
+<p>
+
+Café de especialidad preparado con métodos artesanales,
+precisión y dedicación.
+
+</p>
+
+
+<a class="btn" href="https://wa.me/595983514360">
+
+Reservar ahora
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="titulo">
+
+Nuestra filosofía
+
+</h2>
+
+
+<p class="texto">
+
+
+En Okini creemos que el café no es solamente una bebida.
+
+Es una experiencia.
+
+Cada preparación revela aromas,
+sabores y momentos únicos.
+
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<section id="metodos">
+
+
+<h2 class="titulo">
+
+Métodos especiales
+
+</h2>
+
+
+
+<div class="contenedor">
+
+
+
+<div class="card">
+
+<h3>
+V60
+</h3>
+
+<p>
+Extracción manual limpia y delicada.
+</p>
+
+<div class="precio">
+$5
+</div>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Kyoto Drip
+</h3>
+
+<p>
+Café frío preparado lentamente gota a gota.
+</p>
+
+
+<div class="precio">
+$7
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+Siphon
+</h3>
+
+
+<p>
+Una preparación visual y sofisticada.
+</p>
+
+
+<div class="precio">
+$8
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<div class="contenedor">
+
+
+<div class="card">
+
+
+<h3>
+Prensa Francesa
+</h3>
+
+
+<p>
+
+Sin reserva.
+Disponible hasta el cierre.
+
+</p>
+
+
+<div class="precio">
+$3
+</div>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h3>
+Cata semanal
+</h3>
+
+
+<p>
+
+8 lugares disponibles.
+
+Incluye degustaciones.
+
+</p>
+
+
+<div class="precio">
+$25
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="reserva" id="cata">
+
+
+<h2>
+
+¿Listo para descubrir Okini?
+
+</h2>
+
+
+<p>
+
+Reserva tu experiencia por WhatsApp.
+
+</p>
+
+
+<br>
+
+
+<a class="btn" href="https://wa.me/595983514360">
+
+Reservar experiencia
+
+</a>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="contacto">
+
+
+<h2 class="titulo">
+
+Contacto
+
+</h2>
+
+
+<p class="texto">
+
+
+Propietario:
+
+<br>
+
+<b>
+Denis Chavez Lezcano
+</b>
+
+
+<br><br>
+
+
+WhatsApp:
+
+<br>
+
+<b>
+0983514360
+</b>
+
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+OKINI
+</h2>
+
+
+<p>
+
+Café de Especialidad
+
+</p>
+
+
+<p>
+
+© 2026 Todos los derechos reservados
+
+</p>
+
+
+</footer>
+
+
+
+</body>
+
+</html>
