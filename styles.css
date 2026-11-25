@@ -6,11 +6,12 @@ body{
 
 h1 { 
 color: #2d5a3d;                             /*color de fuente*/
-font-size: 2.5rem;                            /*tamaño de fuente*/  
+font-size: 2.5rem;                            /*tamaño de fuente*/ 
+
 }
 
 header{
-    padding: 1.5rem 2rem;                       /*espacio */
+    padding: 1.5rem 1rem;                  /*espacio */
     border-bottom: 1px solid #1A1A1A;         /*agregar linea en la parte inferior*/ 
 }
 
@@ -32,3 +33,9 @@ h2 {
     font-weight: bold;
 }
 
+footer {
+    padding: 1.5rem 1rem;                   /* espacio */
+    border-top: 1px solid #1A1A1A;      /* línea superior */
+   
+    
+}
